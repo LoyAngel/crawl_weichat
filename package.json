@@ -6,15 +6,30 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "node server/index.js",
+    "dev:all": "concurrently \"npm run server\" \"npm run dev\""
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/multer": "^1.4.13",
+    "@types/node": "^24.0.4",
+    "adm-zip": "^0.5.16",
+    "axios": "^1.10.0",
+    "cors": "^2.8.5",
     "element-plus": "^2.10.2",
+    "express": "^5.1.0",
+    "jsdom": "^26.1.0",
+    "multer": "^2.0.1",
+    "node-html-parser": "^7.0.1",
     "vue": "^3.5.17"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.0",
     "@vue/tsconfig": "^0.7.0",
+    "concurrently": "^9.2.0",
     "typescript": "~5.8.3",
     "vite": "^7.0.0",
     "vue-tsc": "^2.2.10"
